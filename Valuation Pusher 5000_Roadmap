@@ -1,0 +1,48 @@
+Create by Brian Hart @ all rights reserved
+PitchBook Data Inc.
+Fight Club Research Team
+Please contact Brian.Hart@pitchbook.com to report any issues or update requests regarding this script or if you'd just like to talk. 
+
+ 
+
+
+VALUATION PUSHER 5000 PROJECT ROADMAP
+#########################################################################################
+
+MASTER SCRIPT
+-----------------------------------------------------------------------------------------
+[] Add cap table from previous round
+	[x] User decides which round to copy
+	[x] Loop through the round's cap table and enqueue values to an array (FIFO)
+	[x] Exit loop when all numbers are collected
+	[] User decides where to dequeue array
+	[] Array dequeues values out of array into table (FIFO)
+
+[] Stock Split:
+	[] Capture the stock split information
+	[] Determine if stocks should be multiplied or divided
+	[] Loop through cap table calculating cells
+
+[] Data validation on prompts
+
+
+US SCRIPT
+-----------------------------------------------------------------------------------------
+
+
+EU SCRIPT
+-----------------------------------------------------------------------------------------
+
+[] Warrant Assumption:
+	[] Change the note to read: "The company raised EUR $$$ through the combination of 
+	   warrants and venture funding"
+	[] Flip PV Confirm to estimated
+
+[] Debt Assumption function:
+	[] Prompt user for original round amount before val was pushed
+	[] Define a variable as the new round amount (equity portion)
+	[] Define a variable as the difference between the original round amount and the new
+	   round amount (debt portion)
+	[] Put difference into the debt fields on the round details and set debt to "other".
+	[] Put original RTS round amount back into round amount fields/equity fields
+	[] Call the debt_round function to set the correct fields and update external note
